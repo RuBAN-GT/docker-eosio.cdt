@@ -13,3 +13,9 @@ RUN git clone -b $branch --recursive https://github.com/eosio/eosio.cdt $cdt_pat
 WORKDIR ${cdt_path}
 RUN echo 1 | ./build.sh $symbol
 RUN ./install.sh
+
+# Prepare contracts volume
+RUN mkdir /contracts
+WORKDIR /contracts
+
+VOLUME ["/contracts"]
