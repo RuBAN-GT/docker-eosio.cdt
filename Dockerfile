@@ -1,4 +1,8 @@
-FROM eosio/builder
+FROM ubuntu:18.04
+
+LABEL author="ruban0v <dkruban@gmail.com>" \
+      maintainer="RuBAN-GT <dkruban@gmail.com>" \
+      description="Image with EOSIO.CDT for building EOSIO contracts"
 
 ARG branch=master
 ARG cdt_path=/opt/eosio.cdt
